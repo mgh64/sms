@@ -1,0 +1,27 @@
+
+/*
+ *
+*/
+
+/*
+ *  This is main css file for sms(sim) web project
+*/
+body {
+    padding-top: 60px;
+}
+/*
+ * List of style of fonts
+ */
+a {font-family: BMitra;}
+p {font-family: BMitra;}
+h3 {font-family: BMitra;}
+
+.nvb{font-family: BdroidNaskh;}
+
+p.t1{font-family: BdroidNaskh; font-size: 42px;}
+p.t2{font-family: BdroidNaskh; font-size: 18px;}
+p.t3{font-family: BdroidNaskh; font-size: 16px;}
+p.p1{font-family: BMitra; font-size: 20px;}
+p.p2{font-family: BMitra; font-size: 18px;}
+p.p3{font-family: BMitra; font-size: 16px;}
+

@@ -26,7 +26,7 @@
                         <div class="col-lg-12" >
                             <div class="col-lg-9 col-lg-offset-2">
                                 <h3>نحوه ثبت نام :</h3>
-                                <hr class="col-md-7 col-md-offset-4"><br/>
+                                <hr class="col-lg-7 col-lg-offset-4"><br/>
                             </div>
                             <div class="col-lg-10 col-lg-offset-1">
                                 <p>در صورتی که قبلا  در این سامانه ثبت نام کرده، ولی حساب خود را فعال نکرده اید از بخش
@@ -52,21 +52,21 @@
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>شماره همراه</label>
-                                            <input type="text" class="form-control" placeholder="مانند : 09121231234" id="mobile" required data-validation-required-message="Please enter your name.">
+                                            <input type="text" class="form-control" placeholder="مانند : 09121231234" id="mobile" required data-validation-required-message="لطفا شماره تلفن همراه خود را وارد نمایید.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>کلمه عبور</label>
-                                            <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="pass" required data-validation-required-message="Please enter your email address.">
+                                            <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="pass" required data-validation-required-message="لطفا کلمه عبور خود وارد نمایید.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>تکرار کلمه عبور</label>
-                                            <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="repass" required data-validation-required-message="Please enter your phone number.">
+                                            <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="repass" required data-validation-required-message="لطفا کلمه عبور خود را دوباره وارد نمایید.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -81,14 +81,14 @@
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>نام</label>
-                                            <input type="text" class="form-control" placeholder="نام" id="first_name" required data-validation-required-message="Please enter your name.">
+                                            <input type="text" class="form-control" placeholder="نام" id="first_name" required data-validation-required-message="لطفا نام خود را وارد نمایید.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>نام خانوادگی</label>
-                                            <input type="text" class="form-control" placeholder="نام خانوادگی" id="last_name" required data-validation-required-message="Please enter your email address.">
+                                            <input type="text" class="form-control" placeholder="نام خانوادگی" id="last_name" required data-validation-required-message="لطفا نام خانوادگی خود را وارد نمایید.">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
@@ -107,39 +107,36 @@
                                         <div class="form-group col-sm-8 col-sm-offset-3 floating-label-form-group controls">
                                             <label>تاریخ تولد</label>
                                             <div>
-                                                <!--<input type="month" class="form-control" placeholder="روز" id="day" required data-validation-required-message="Please enter your phone number.">-->
                                                 <div class="row">
                                                     <div class="col-xs-4">
                                                         <input type="text" class="form-control" placeholder="سال">
                                                     </div>
                                                     <div class="col-xs-5">
-                                                        <input list="months" name="month" class="form-control" value="ماه">
-                                                        <datalist id="months">
-                                                            <option value="فروردین">
-                                                            <option value="اردیبهشت">
-                                                            <option value="خرداد">
-                                                            <option value="تیر">
-                                                            <option value="مرداد">
-                                                            <option value="شهریور">
-                                                            <option value="مهر">
-                                                            <option value="آبان">
-                                                            <option value="آذر">
-                                                            <option value="دی">
-                                                            <option value="بهمن">
-                                                            <option value="اسفند">
-                                                        </datalist>
+                                                        <select id="months" class="form-control">
+                                                            <option value= 1>&nbsp; فروردین
+                                                            <option value= 2>&nbsp; اردیبهشت
+                                                            <option value= 3>&nbsp; خرداد
+                                                            <option value= 4>&nbsp; تیر
+                                                            <option value= 5>&nbsp; مرداد
+                                                            <option value= 6>&nbsp; شهریور
+                                                            <option value= 7>&nbsp; مهر
+                                                            <option value= 8>&nbsp; آبان
+                                                            <option value= 9>&nbsp; آذر
+                                                            <option value= 10>&nbsp; دی
+                                                            <option value= 11>&nbsp; بهمن
+                                                            <option value= 12>&nbsp; اسفند
+                                                        </select>
                                                     </div>
                                                     <div class="col-xs-3">
-                                                        <input list="days" name="day" class="form-control" value="روز" inlist="days">
-                                                        <datalist id="days">
-                                                            <option value="1"><option value="2"><option value="3"><option value="4"><option value="5">
-                                                            <option value="6"><option value="7"><option value="8"><option value="9"><option value="10">
-                                                            <option value="11"><option value="12"><option value="13"><option value="14"><option value="15">
-                                                            <option value="16"><option value="17"><option value="18"><option value="19"><option value="20">
-                                                            <option value="21"><option value="22"><option value="23"><option value="24"><option value="25">
-                                                            <option value="26"><option value="27"><option value="28"><option value="29"><option value="30">
-                                                            <option value="31">
-                                                        </datalist>
+                                                        <select id="days" class="form-control">
+                                                            <option value="1">1<option value="2">2<option value="3">3<option value="4">4<option value="5">5
+                                                            <option value="6">6<option value="7">7<option value="8">8<option value="9">9<option value="10">10
+                                                            <option value="11">11<option value="12">12<option value="13">13<option value="14">14<option value="15">15
+                                                            <option value="16">16<option value="17">17<option value="18">18<option value="19">19<option value="20">20
+                                                            <option value="21">21<option value="22">22<option value="23">23<option value="24">24<option value="25">25
+                                                            <option value="26">26<option value="27">27<option value="28">28<option value="29">29<option value="30">30
+                                                            <option value="31">31
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -149,14 +146,22 @@
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>آدرس ایمیل</label>
-                                            <input type="tel" class="form-control" placeholder="yourname@email.com" id="email" required data-validation-required-message="Please enter your phone number." dir="ltr">
+                                            <input type="tel" class="form-control" placeholder="yourname@email.com" id="email" required data-validation-required-message="لطفا ادرس ایمیل خود را وارد نمایید." dir="ltr">
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>کد امنیتی</label>
-                                            <img src="" >
+                                            <div class="row">
+                                                <img src="../image/smartphone-message-send-icon%20(4).png" >
+                                                <div class="col-xs-4">
+                                                    <input type="text" class="form-control" placeholder="کد امنیتی" required data-validation-required-message="لطفا کد امنیتی را وارد نمتیید.">
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <input type="button" value="refresh">
+                                                </div>
+                                            </div>
                                             <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
