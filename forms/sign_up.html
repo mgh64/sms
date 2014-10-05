@@ -4,43 +4,51 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>گروه نرم افزاری تک</title>
+    <title>گروه نرم افزاری کیان</title>
 
     <!-- Bootstrap -->
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/fonts.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![end if]-->
+    <script type="text/javascript" src="../js/jquery-2.1.1.min.js"></script>
+    <!--<script src="../js/placeholdem.min.js"></script>-->
+
+    <style>
+        h1 {text-shadow: 3px 3px 10px #555555;}
+        #main {background: linear-gradient(to bottom, #cccccc, #eeeeee); /* Standard syntax (must be last) */}
+    </style>
 </head>
 
-<body>
-    <div class="container" id="main" style="font-family: BMitra;font-size:18px">
-        <div class="panel panel-default">
+<body >
+    <div class="container" >
+        <div class="panel panel-default" id="main">
             <div class="row">
                 <div class="container col-lg-12">
                     <div class="container">
-                        <div class="col-lg-12" >
+                        <div id="comment" class="col-lg-12" >
                             <div class="col-lg-9 col-lg-offset-2">
-                                <h3>نحوه ثبت نام قطعی :</h3>
+                                <h1>نحوه ثبت نام :</h1>
                                 <hr class="col-lg-7 col-lg-offset-4"><br/>
                             </div>
                             <div class="col-lg-10 col-lg-offset-1">
-                                <p>برای ثبت نام قطعی مراحل زیر را دنبال نمائید :</p>
+                                <h4>برای ثبت نام مراحل زیر را دنبال نمائید :</h4>
                                 <ol>
                                     <li>فرم زیر را تکمیل نموده و ارسال نمائید.</li>
                                     <li>پس از دریافت  پیامک حاوی کد فعالسازی، از طریق کادر مشکی بالا وارد حساب کاربری خود شده و آن را در سیستم ثبت نمائید.</li>
                                     <li>پس از مشاهده لیست تعرفه ها و انتخاب «مدت اشتراک» مورد نظر، هزینه آن را پرداخت نموده و تاریخ واریز و شماره حواله را در سامانه ثبت نمائید.</li>
                                 </ol>
-                                <p>پس از طی مراحل فوق و تایید مبلغ واریزی، حساب کاربری شما فعال شده و تا پایان مدت اشتراک انتخابی پیامک دریافت خواهید نمود.</p>
+                                <p>پس از طی مراحل فوق و تایید مبلغ واریزی، حساب کاربری شما فعال شده و تا پایان مدت اشتراک انتخابی پیامک دریافت خواهید نمود.</p><br/>
                             </div>
                         </div>
-                        <div class="col-lg-7 col-lg-offset-4">
-                            <form id="contact_form" method="post" action="">
-                                <div  id="info_hesab">
+                        <div id="sign_up" class="col-lg-7 col-lg-offset-4">
+                            <form name="myform" id="form-sign_up" method="post" action="">
+                                <div id="info_hesab">
                                     <div class="row control-group">
                                         <div class="col-lg-12 text-right">
                                             <h3>مشخصات حساب :</h3>
@@ -48,24 +56,21 @@
                                         </div>
                                     </div>
                                     <div class="row control-group">
-                                        <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                        <div class="form-group floating-label-form-group controls col-sm-6 col-sm-offset-5">
                                             <label>شماره همراه</label>
-                                            <input type="text" class="form-control" placeholder="مانند : 09121231234" id="mobile" required data-validation-required-message="لطفا شماره تلفن همراه خود را وارد نمایید.">
-                                            <p class="help-block text-danger"></p>
+                                            <input type="tel" maxlength="12" name="mobile" class="form-control rq" placeholder="شماره همراه" id="mobile" ptrn="^(09)[0-9]{9}$" error_text="لطفا شماره همراه خود را بصورت 09223334444 وارد نمائید." autofocus>
                                         </div>
                                     </div>
                                     <div class="row control-group">
-                                        <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                        <div class="form-group floating-label-form-group controls col-sm-6 col-sm-offset-5">
                                             <label>کلمه عبور</label>
-                                            <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="pass" required data-validation-required-message="لطفا کلمه عبور خود وارد نمایید.">
-                                            <p class="help-block text-danger"></p>
+                                            <input type="password" maxlength="20" name="password" class="form-control rq" placeholder="کلمه عبور" id="password" >
                                         </div>
                                     </div>
                                     <div class="row control-group">
-                                        <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                        <div class="form-group floating-label-form-group controls col-sm-6 col-sm-offset-5">
                                             <label>تکرار کلمه عبور</label>
-                                            <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="repass" required data-validation-required-message="لطفا کلمه عبور خود را دوباره وارد نمایید.">
-                                            <p class="help-block text-danger"></p>
+                                            <input type="password" maxlength="20" name="password_check" class="form-control rq" placeholder="کلمه عبور" id="password_check">
                                         </div>
                                     </div>
                                 </div>
@@ -79,26 +84,23 @@
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>نام</label>
-                                            <input type="text" class="form-control" placeholder="نام" id="first_name" required data-validation-required-message="لطفا نام خود را وارد نمایید.">
-                                            <p class="help-block text-danger"></p>
+                                            <input type="text" name="first_name" class="form-control rq" placeholder="نام" id="first_name" ptrn="^[پچجحخهعغفقثصضشسیبلاتنمکگوئدذرزطظژؤإأءًٌٍَُِ ]+$" error_text="لطفا نام خود را صحیح (فارسی)وارد نمائید.">
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>نام خانوادگی</label>
-                                            <input type="text" class="form-control" placeholder="نام خانوادگی" id="last_name" required data-validation-required-message="لطفا نام خانوادگی خود را وارد نمایید.">
-                                            <p class="help-block text-danger"></p>
+                                            <input type="text"  name="last_name" class="form-control rq" placeholder="نام خانوادگی"  id="last_name" ptrn="^[پچجحخهعغفقثصضشسیبلاتنمکگوئدذرزطظژؤإأءًٌٍَُِ ]+$" error_text="لطفا نام خانوادگی خود را صحیح (فارسی)وارد نمائید.">
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>جنسیت</label>
                                             <div>
-                                                <input type="radio" id="male" name="inlineRadioOptions" checked/> مرد
+                                                <input type="radio" id="male" name="gender" value="true" checked/> مرد
                                                 &nbsp;&nbsp;&nbsp;
-                                                <input type="radio" id="famale" name="inlineRadioOptions" /> زن
+                                                <input type="radio" id="famale" name="gender" value="false" /> زن
                                             </div>
-                                            <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="row control-group">
@@ -107,10 +109,10 @@
                                             <div>
                                                 <div class="row">
                                                     <div class="col-xs-4">
-                                                        <input type="text" class="form-control" placeholder="سال">
+                                                        <input type="text" maxlength="4" name="birth_year" class="form-control rq" placeholder="سال تولد" id="birth_year" ptrn="^(13||14)[0-9]{2}$" error_text="لطفا سال تولد خود را صحیح وارد نمائید.">
                                                     </div>
                                                     <div class="col-xs-5">
-                                                        <select id="months" class="form-control">
+                                                        <select id="birth_month" name="birth_month" class="form-control">
                                                             <option value= 1>&nbsp; فروردین
                                                             <option value= 2>&nbsp; اردیبهشت
                                                             <option value= 3>&nbsp; خرداد
@@ -126,7 +128,7 @@
                                                         </select>
                                                     </div>
                                                     <div class="col-xs-3">
-                                                        <select id="days" class="form-control">
+                                                        <select id="birth_day" name="birth_day" class="form-control">
                                                             <option value="1">1<option value="2">2<option value="3">3<option value="4">4<option value="5">5
                                                             <option value="6">6<option value="7">7<option value="8">8<option value="9">9<option value="10">10
                                                             <option value="11">11<option value="12">12<option value="13">13<option value="14">14<option value="15">15
@@ -138,37 +140,24 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <p class="help-block text-danger"></p>
                                         </div>
                                     </div>
                                     <div class="row control-group">
                                         <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
                                             <label>آدرس ایمیل</label>
-                                            <input type="tel" class="form-control" placeholder="yourname@email.com" id="email" required data-validation-required-message="لطفا ادرس ایمیل خود را وارد نمایید." dir="ltr">
-                                            <p class="help-block text-danger"></p>
+                                            <input  name="email" class="form-control rq" placeholder="آدرس ایمیل" id="email" ptrn="^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$" error_text="لطفا آدرس ایمیل خود را صحیح وارد نمائید.">
                                         </div>
                                     </div>
-                                    <div class="row control-group">
-                                        <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
-                                            <label>کد امنیتی</label>
-                                            <div class="row">
-                                                <img src="../image/smartphone-message-send-icon%20(4).png" >
-                                                <div class="col-xs-4">
-                                                    <input type="text" class="form-control" placeholder="کد امنیتی" required data-validation-required-message="لطفا کد امنیتی را وارد نمتیید.">
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <input type="button" value="refresh">
-                                                </div>
-                                            </div>
-                                            <p class="help-block text-danger"></p>
-                                        </div>
+                                    <div class="row form-group">
+                                        <p>کد امنیتی</p>
                                     </div>
-                                    <br>
-                                    <div class="form-group col-md-11">
-                                        <input type="checkbox"> &nbsp;
-                                        <a href="#"> شرایط قرارداد را خوانده و قبول دارم</a><br/><br/>
-                                        <button type="submit" class="btn btn-success btn-md">ارسال</button>
-                                    </div>
+                                </div>
+                                <br>
+                                <div class="form-group col-md-11">
+                                    <input type="checkbox" name="agreement" id="agreement">  &nbsp;
+                                    <a href="#"> شرایط قرارداد را خوانده و قبول دارم</a><br/><br/>
+                                    <button class="btn btn-primary btn-md">بازگشت</button>
+                                    <button disabled type="submit" class="btn btn-success btn-md" id="btn_submit">ارسال</button>
                                 </div>
                             </form>
                         </div>
@@ -179,8 +168,27 @@
     </div>
 </body>
 
-<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="../js/bootstrap.min.js"></script>
+<script src="../js/sign_up.js"></script>
+<!--<script>-->
+
+    <!--Placeholdem( document.querySelectorAll( '[placeholder]' ) );-->
+
+    <!--var fadeElems = document.body.querySelectorAll( '.fade' ),-->
+            <!--fadeElemsLength = fadeElems.length,-->
+            <!--i = 0,-->
+            <!--interval = 50;-->
+
+    <!--function incFade() {-->
+        <!--if( i < fadeElemsLength ) {-->
+            <!--fadeElems[ i ].className += ' fade-load';-->
+            <!--i++;-->
+            <!--setTimeout( incFade, interval );-->
+        <!--}-->
+    <!--}-->
+
+    <!--setTimeout( incFade, interval );-->
+
+<!--</script>-->
 </html>

@@ -3,6 +3,7 @@
  *
 */
 
+
 /*
  *  This is main css file for sms(sim) web project
 */
@@ -10,11 +11,9 @@
 /*
  * List of style of fonts
  */
-a {font-family: BMitra;}
-p {font-family: BMitra;}
-h3 {font-family: BMitra;}
-
-.nvb{font-family: BdroidNaskh;}
+a, p, h1, h2, h3, h4, h5, li, div{font-family: BMitra;}
+label, input, select {font-family: BMitra; font-size: 16px;}
+button, .nvb {font-family: BdroidNaskh;}
 
 p.t1{font-family: BdroidNaskh; font-size: 42px;}
 p.t2{font-family: BdroidNaskh; font-size: 18px;}

@@ -21,16 +21,15 @@
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+      <style>
+          body {
+              padding-top: 50px;
+              padding-bottom: 20px;
+          }
+      </style>
   </head>
 
   <body>
-    <style>
-        body {
-            padding-top: 50px;
-            padding-bottom: 20px;
-        }
-    </style>
     <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -40,15 +39,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">گروه نرم افزاری تک</a>
+          <a class="navbar-brand" href="#">گروه نرم افزاری کیان</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <form class="navbar-form navbar-right" role="form" method="post" action="">
             <div class="form-group">
-              <input type="text" placeholder="شماره همراه" class="nvb form-control" id="mobile" tabindex="1" autofocus>
+              <input type="text" placeholder="شماره همراه" class="nvb form-control" name="mobile" id="mobile" tabindex="1" autofocus>
             </div>
             <div class="form-group">
-              <input type="password" placeholder="کلمه عبور" class="nvb form-control" id="pass" tabindex="2">
+              <input type="password" placeholder="کلمه عبور" class="nvb form-control" name="password" id="password" tabindex="2">
             </div>
             <button type="submit" class="btn btn-success nvb" tabindex="4">ورود</button>
           </form>
@@ -61,15 +60,15 @@
         <div class="container">
             <img src="../image/sms_256.png" align=right style="padding-left: 2%">
             <p class="t1">سامانه پیام رسان سیم</p><br/>
-            <p>گروه نرم افزای تک با راه اندازی این سامانه، نوسانات قیمت نقره خام را در بازار، برای شرکتها، بازاریان و مشاغل ذیربط از طریق پیامک به صورت لحظه ای اعلام می نماید. متقاضیان محترم می توانند با ثبت نام موقت از طریق ارسال پیامک بدون متن به شماره اختصاصی سامانه(10008080008000) به مدت یک هفته بصورت <ins>رایگان</ins> از خدمات این سامانه بهره منده شده و در صورت تمایل به ادامه عضویت، اقدام به ثبت نام قطعی نمایند.</p>
+            <p>گروه نرم افزای تک با راه اندازی این سامانه، نوسانات قیمت نقره خام را در بازار، برای شرکتها، بازاریان و مشاغل ذی ربط از طریق پیامک به صورت لحظه ای اعلام می نماید. متقاضیان محترم می توانند با ارسال عدد  8  به شماره اختصاصی سامانه (10008080008000) به مدت یک هفته به صورت آزمایشی (<ins>رایگان</ins>) از خدمات این سامانه بهره منده شده و در صورت تمایل به عضویت، اقدام به ثبت نام نمایند.</p>
             <br/>
             <form method="post" action="">
-                <a href="/sign_up" class="btn btn-primary btn-lg col-lg-2 nvb" role="button" tabindex="6">ثبت نام قطعی</a>
+                <a href="sign_up.html" class="btn-lg btn-primary col-lg-1 nvb" role="button" tabindex="6">ثبت نام</a>
             </form>
         </div>
     </div>
 
-    <div class="container">
+    <div id="bottom" class="container">
         <!-- Example row of columns -->
         <div class="row">
             <div class="col-md-4">

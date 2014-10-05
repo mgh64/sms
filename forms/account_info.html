@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>گروه نرم افزاری تک</title>
+
+    <!-- Bootstrap -->
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/style.css"  rel="stylesheet">
+    <link href="../css/fonts.css" rel="stylesheet">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![end if]-->
+</head>
+
+<body>
+<div class="container" id="main">
+    <div class="row">
+        <div class="container col-lg-12">
+            <div class="container">
+                <div class="col-lg-7 col-lg-offset-4">
+                    <form id="form-account" method="post" action="">
+                        <div id="info_hesab">
+                            <div class="row control-group">
+                                <div class="col-lg-12 text-right">
+                                    <h3>مشخصات حساب :</h3>
+                                    <hr class="col-md-7 col-md-offset-4">
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                    <label>شماره همراه</label>
+                                    <input type="text" class="form-control" placeholder="مانند : 09121231234" id="mobile" required data-validation-required-message="لطفا شماره تلفن همراه خود را وارد نمایید.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                    <label>کلمه عبور</label>
+                                    <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="pass" required data-validation-required-message="لطفا کلمه عبور خود وارد نمایید.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row control-group">
+                                <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                    <label>تکرار کلمه عبور</label>
+                                    <input type="password" class="form-control" placeholder="حداقل 6 رقم" id="repass" required data-validation-required-message="لطفا کلمه عبور خود را دوباره وارد نمایید.">
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                            </div>
+                            <div class="row form-group">
+                                <div class="form-group col-sm-6 col-sm-offset-5 floating-label-form-group controls">
+                                    <p>کد امنیتی</p>
+                                    <div></div>
+                                </div>
+                        </div>
+                        <br>
+                        <div class="form-group col-md-11">
+                            <button class="btn btn-primary btn-md">بازگشت</button>
+                            <button type="submit" class="btn btn-success btn-md">ثبت</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="../js/bootstrap.min.js"></script>
+</html>
